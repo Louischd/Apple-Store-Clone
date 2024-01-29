@@ -1,0 +1,56 @@
+/*Home Page*/
+body {
+    background-color: skyblue;
+}
+p {
+    font-size: 10px;
+}
+/*Navigation Menu*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav li {
+    list-style-type: none;
+    margin: 10px 20px;
+}
+nav li a {
+    text-decoration: none;
+}
+div.burger{
+    background-image: url(images/burger_menu.png);
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    visibility: hidden;
+}
+
+div.open{
+    background-image: url(images/croix\ burger.png);
+}
+
+/*Responsive*/
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: red;
+    }
+    nav {
+        flex-direction: column;
+        display: none;
+    }
+    nav li {
+        text-align: center;
+    }
+    div.burger{
+        visibility: visible;
+    }
+    .open + nav{
+        display: block;
+        height: 100px;
+        transition: 0.3s height;
+    }
+    p {
+        font-size: 5px;
+    }
+  }
